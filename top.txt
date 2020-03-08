@@ -1,0 +1,25 @@
+
+
+https://www.hackerrank.com/
+
+https://www.topcoder.com/
+
+https://codingcompetitions.withgoogle.com/codejam
+
+https://www.codewars.com/ -> tienen q pasar un retp para inscribirte
+
+https://www.codechef.com/
+
+https://projecteuler.net/ -> es un sitio web dedicado a una serie de problemas matemáticos diseñados para ser resueltos por programas
+                             computacionales.
+
+
+https://codefights.net/#/ -> se presenta codigo con un error y lo q hago es resorverlo
+
+https://www.codeval.es/
+
+https://codeforces.com/ -> es ruso y entrega polos
+
+https://www.spoj.com/
+
+http://theaigames.com/ -> se centra en inteligencia artificial
