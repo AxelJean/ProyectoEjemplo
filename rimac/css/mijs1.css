@@ -1,0 +1,563 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, header, nav, main, section, article,footer,img {
+	margin:0;
+	padding:0;
+	border:0;
+}
+@font-face {
+font-family: 'Myriad Pro';
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro Regular'), url('../fonts/myriad-pro/MYRIADPRO-REGULAR.woff') format('woff');
+}
+@font-face {
+font-family: 'Myriad Pro';
+font-style: normal;
+font-weight: 600;
+src: local('Myriad Pro Semibold'), url('../fonts/myriad-pro/MYRIADPRO-SEMIBOLD.woff') format('woff');
+}
+@font-face {
+font-family: 'Myriad Pro Condensed';
+font-style: normal;
+font-weight: normal;
+src: local('Myriad Pro'), url('../fonts/myriad-pro/MYRIADPRO-COND.woff') format('woff');
+}
+@font-face {
+font-family: 'Myriad Pro';
+font-style: italic;
+font-weight: bold;
+src: local('Myriad Pro Bold Italic'), url('../fonts/myriad-pro/MYRIADPRO-BOLDIT.woff') format('woff');
+}
+@font-face {
+font-family: 'Myriad Pro';
+font-style: normal;
+font-weight: bold;
+src: local('Myriad Pro Bold'), url('../fonts/myriad-pro/MYRIADPRO-BOLD.woff') format('woff');
+}
+html{font-family: Myriad Pro;}
+
+#cabecera{
+  width:100%;
+  background-color:#F55;
+  padding-bottom:1%;
+  
+}
+
+.menu-primero{
+	width:50%;
+	float:left;
+	padding-top:3.5%;
+	padding-left:6%;
+	}
+	
+.menu-segundo{
+	width:35%;
+	float:right;
+	padding-right:1%;
+	}	
+	
+#rimac, #nuestro, #promociones, #seguro, #numero{
+	color:#FFF;
+	font-size:20px;
+	text-decoration:none;
+	}	
+#rimac{
+	padding-right:6%;
+	}
+#nuestro{
+	padding-right:4%;
+	}
+#promociones{
+	padding-right:4%;
+    }
+#seguro{
+	
+    }
+#numero{
+	padding-left:20%;
+	padding-right:10%;
+    }
+	
+	
+#lupa{
+	 padding-right: 3%;
+    }
+
+
+/*Ejemplos JS hechos por mi*/
+.miNombre{
+	 float:left;
+	 color:#080;
+    }
+
+.miNombreNegro{
+	 float:left;
+	 color:#000;
+    }
+	
+	
+#ejm2{
+	 float:left;
+    }		
+.miNombre2{
+	 float:left;
+	 color:#00F;
+    }	
+	
+#ejm3{
+	 float:left;
+	 padding-left:1%;
+    }	
+.miNombre3{
+	 float:left;
+	 color:#006C00;
+    }	
+	
+#ejm4{
+	 float:left;
+	 padding-left:1%;
+    }	
+.miNombre4{
+	 float:left;
+	 color:#0FF;
+    }	
+
+#ejm5{
+	 float:left;
+	 padding-left:1%;
+    }	
+.miNombre5{
+	 float:left;
+    }
+.miNombreAZUL{
+	 color:#00F;
+    }	
+
+
+#ejm6{
+	 float:left;
+	 padding-left:1%;
+    }	
+.miNombre6{
+	 float:left;
+    }
+.miNombreVERDE{
+	 color:#004800;
+    }
+	
+	
+#ejm7{
+	 float:left;
+	 padding-left:1%;
+    }	
+.miNombre7{
+	 float:left;
+    }
+.miNombreNaranja{
+	 color:#FF8000;
+    }				
+.miNombreRojo{
+	 color:#F00;
+    }
+	
+	
+	
+		
+	
+/*--------------------------------------------- MAIN-CUERPO---------------------------------------------------------*/
+
+.banner-imagen{
+
+	width:100%; height:500px;
+}
+
+#micuenta{
+
+	display:none;
+}
+
+/*Segunda Seccion*/
+
+#sec2{/*Este es el q esta x defecto, se va ejecutar cuando fuera del rango de los medias-querys   0 - 519*/
+	width:100%; 
+	margin-left:auto;
+	 margin-right:auto; 
+	 padding-bottom:80px;
+	}
+#sec2 .parrafo{
+	text-align:center;
+	 padding-top:10%;
+	  padding-bottom:7%;
+	 font-family: Myriad Pro;
+	}
+#sec2 .parrafo #cuida{
+	font-size:40px; 
+	color:#999
+}
+#sec2 .parrafo #precios{
+	font-size:20px;
+	 color:#999
+}
+	
+.logo{	float:left; width:50%; text-align:center;}
+
+/*Tercera Seccion*/
+#sec3{
+	background-color:#f5f5f5;
+	 padding-top:70px; 
+	 padding-bottom:70px;
+	}
+
+	.article-texto{
+		float:left; 
+		width:50%;
+		 text-align:center;
+		}
+/*Cuarta Seccion*/
+	#sec4{
+	width:100%; margin-left:auto; margin-right:auto; padding-bottom:100px;
+	}
+/*Quinta Seccion*/
+/*Sexta Seccion*/
+
+
+/*NAVEGACION_Desplegable_HTMLyCSS*/
+.navegacionx1{
+	width:1000px;
+    margin:30px auto;
+	background-color:#666;
+	}
+	
+.navegacionx1 ul{
+	list-style:none;
+	}
+	
+.menux1 > li{
+	display:inline-block;
+	position:relative;
+	}
+/*display:block;: hace que el comportamiento del elemento sea como un bloque.*/
+.menux1 > li > a{
+	display:block;
+	padding:15px 20px;
+	color:black;
+	font-family:"Lucida Console", Monaco, monospace;
+	text-decoration:none;
+	}
+	
+.menux1 li a:hover{
+	color:#09F;
+	transition:all .3s;
+	}
+	
+	
+/*Submenux0*/	
+.submenux0{	
+	position:absolute;
+	background:#C99;
+	width:100%;
+	display:none;
+}
+
+.submenux0 li a{	
+    display:block;
+	padding:15px;
+	color:red;
+	text-decoration:none;
+	font-family:"Lucida Console", Monaco, monospace;
+}
+
+.menux1 li:hover .submenux0{
+	display:block;
+	}
+
+
+/*Submenux1*/	
+.submenux1{
+	position:absolute;
+	background:green;
+	width: 100%;
+	display:none;
+	}	
+
+.submenux1 li a{
+	display:block;
+	padding:15px;
+	color:white;
+	text-decoration:none;
+	font-family:"Lucida Console", Monaco, monospace;
+	}
+
+/*Ahora cuando pase el mouse aparezca el submenux1 x eso usamos hover*/		
+.menux1 li:hover .submenux1{
+	display:block;
+	}
+
+
+/*Submenux2*/
+.submenux2{
+	position:absolute;
+	background:#663;
+	width:100%;
+	display:none;
+	}
+	
+.submenux2 li a{
+	display:block;
+	padding:15px;
+	color:blue;
+	text-decoration:none;
+	font-family:"Lucida Console", Monaco, monospace;
+	}	
+
+.menux1 li:hover .submenux2{
+	display:block;
+	}
+	
+
+/*Submenux3*/
+.submenux3{
+	position:absolute;
+	background:#CFC;
+	width:100%;
+	display:none;
+	}
+
+.submenux3 li a{
+	padding:15px;
+	display:block;
+	color:#ff9800;
+	text-decoration:none;
+	font-family:"Lucida Console", Monaco, monospace;
+	}	
+	
+.menux1 li:hover .submenux3{
+	display:block;
+	}	
+	
+
+
+
+/*NAVEGACION PRINCIPAL Desplegable_HTMLyCSS*/
+.navegacionx2{
+	width:1000px;
+	background-color:#CC0;
+	margin:30px auto;
+}		
+.navegacionx2 ul{
+	list-style:none;
+	}	
+.menux2 > li{
+	display:inline-block;
+	position:relative;
+	}
+.menux2 > li > a{
+	width: 180px;
+    display: block;
+    padding: 30px;
+	color:#000;
+	text-align: center;
+    text-decoration: none;
+	}	
+.menux2 li a:hover{
+	color:#F93;
+	transition:all .3s;
+	}	
+
+
+/*Submenut0*/	
+.submenut0{
+	position:absolute;
+	background-color:#999;
+	width:1000px;
+	display:none;
+	padding-top: 20px;
+	}	
+.menux2 li:hover .submenut0	{
+	display:block;
+	}	
+	
+	
+/*Submenut1*/
+.submenut1{
+	position:absolute;
+	background-color:#39C;
+	width:1000px;
+	display:none;
+	padding-top: 20px;
+	}
+.menux2 li:hover .submenut1	{
+	display:block;
+	}	
+	
+	
+/*Submenut2*/	
+.submenut2{
+	position:absolute;
+	background-color:#FC6;
+	width:1000px;
+	display:none;
+	padding-top: 20px;
+	}
+.menux2 li:hover .submenut2	{
+	display:block;
+	}	
+
+
+/*Submenut3*/
+.submenut3{
+	position:absolute;
+	background-color:#9CC;
+	width:1000px;
+	display:none;
+	padding-top: 20px;
+	}
+.menux2 li:hover .submenut3	{
+	display:block;
+	}	
+	
+	
+	
+	
+	
+	
+/*NAVEGACION PRINCIPAL Desplegable con JS*/	
+.navegacionx3{
+	width:1000px;
+	background-color:#CC9;
+	margin:30px auto;
+	}		
+.navegacionx3 ul{
+	list-style:none;
+	}
+.menux3 > li{
+	display:inline-block;
+	position:relative;
+	}	
+.menux3 > li > a{
+	width: 180px;
+    display: block;
+    padding: 30px;
+	color:#00F;
+	text-align: center;
+    text-decoration: none;
+	}	
+.menux3 li a:hover{
+	color:#363;
+	transition:all .3s;
+	}					
+
+/*Submenuq1*/	
+#submenuq1{
+	position:absolute;
+	background-color:#9CC;
+	width:1000px;
+	padding-top: 20px;
+	display:none;
+	}
+	
+/*Submenuq2*/
+#submenuq2{
+	position:absolute;
+	background-color:#6C9;
+	width:1000px;
+	padding-top: 20px;
+	display:none;
+	}
+	
+/*Submenuq3*/
+#submenuq3{
+	position:absolute;
+	background-color:#99C;
+	width:1000px;
+	padding-top: 20px;
+	display:none;
+	}				
+	
+/*Submenuq4*/	
+#submenuq4{
+	position:absolute;
+	background-color:#F96;
+	width:1000px;
+	padding-top: 20px;
+	display:none;
+	}		
+	
+	
+	
+	
+	
+	
+	
+	
+/*------------------------------------------------------------------*/	
+	
+	
+	
+	
+	
+	
+
+@media (min-width:520px){
+	
+	#sec2, #sec4{
+	width:500px;
+	
+	}
+}
+
+@media (min-width:768px){
+	
+	#sec2, #sec4{
+	width:760px;
+	}
+	
+	.logo{ width:25%}
+}
+@media (min-width:900px){/*por encima de 1200px width se ejecuta rojo*/
+	
+	#sec2, #sec4{
+	width:895px;
+	}
+}
+
+@media (min-width:1200px){/*por encima de 1200px width se ejecuta rojo*/
+	
+	#sec2, #sec4{
+	width:1000px;
+	}
+	
+}
+/********************** max***************************************/
+@media (max-width:1200px){ 
+  .nav-1 #rimac, .nav-1 #nuestro, .nav-1 #promociones, .nav-1 #seguro{
+	padding-right: 4%;
+    font-size: 15px;
+	} 
+}
+
+@media (max-width:900px){ 
+  .nav-1{
+	  display:none;
+	}
+	
+	
+   #micuenta{
+	  display:block;
+	}	 
+}
