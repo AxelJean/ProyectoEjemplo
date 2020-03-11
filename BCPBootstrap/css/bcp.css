@@ -1,0 +1,467 @@
+@charset "utf-8";
+/* CSS Document */
+
+	/*
+/*
+ * ---------------------------------------------------------------
+ * Web Fonts
+ * ---------------------------------------------------------------
+ */
+
+@font-face {
+	font-family: 'Bebas Neue';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/Bebas-Neue.woff2') format('woff2'),
+	     url('../fonts/Bebas-Neue.woff') format('woff'),
+	     url('../fonts/Bebas-Neue.ttf') format('truetype');
+}
+
+/*
+ * ---------------------------------------------------------------
+ * Reset
+ * ---------------------------------------------------------------
+ */
+
+body, blockquote, dl, dd, figure, fieldset,
+h1, h2, h3, h4, h5, h6, hr, ol, p, pre,
+textarea, ul {
+	margin: 0;
+}
+button, fieldset, input, legend, option,
+select, td, textarea, th {
+	padding: 0;
+}
+article, aside, details, figcaption, figure, footer,
+header, main, menu, nav, section {
+	display: block;
+}
+table {
+	border-collapse: collapse;
+}
+b, strong {
+	font-weight: bolder;
+}
+img {
+	border-style: none;
+}
+button, input, optgroup, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+/*
+ * ---------------------------------------------------------------
+ * Base --- Estilos se va aplicar todas las paginas :
+	* = aplica todas elementos de la pagina
+ * ---------------------------------------------------------------
+ */
+*, *::before, *::after { /* Para que no se distorsiones width y padding */
+	-moz-box-sizing: inherit; 
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;  
+}
+html {/*dddd */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #333;
+	font: 100%/1.5 'Glober', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+blockquote, dl, figure, hr, ol, p, pre, ul {
+	margin-bottom: 1.5rem;
+}
+ol ol, ol ul, ul ol, ul ul {
+	margin-bottom: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font: inherit;
+}
+/*
+ * ---------------------------------------------------------------
+ * Grid  ... grid bosstrap .. clases comunes que se van utilizar cualquier pagina
+ * ---------------------------------------------------------------
+ */
+
+ .img-responsive {
+ 	display: block;
+ 	max-width: 100%;
+ 	height: auto;
+ }
+ .center-block {
+ 	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+.clearfix::after,
+.container::after,
+.row::after {
+	clear: both;
+	content: '';
+	display: block;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1070px;
+	padding: 0 32px;
+}
+.narrow-container {
+	max-width: 810px;
+}
+.full-container {
+	max-width: 1920px;
+}
+/*.select-yearb { background-color:#ec7e1b; color: white; float: right !important; padding: 0 10px; !important; }*/
+.row {
+	margin: 0 -16px;
+}
+.small-gutter-row {
+	margin-left: 0;/*-6px*/
+	margin-right: 0;/*-6px*/
+}
+[class^='col-'],
+[class*=' col-'] {
+	float: left;
+	padding: 0 16px;
+	position: relative;
+	width: 100%;
+}
+.small-gutter-col {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+/*
+ * ---------------------------------------------------------------
+ * Para grid bosstrap .. los min-width solo para width
+ * ---------------------------------------------------------------
+ */
+.col-xs-1 { width: 8.333333%; }
+.col-xs-2 { width: 16.666667%; }
+.col-xs-3 { width: 25%; }
+.col-xs-4 { width: 33.333333%; }
+.col-xs-5 { width: 41.666667%; }
+.col-xs-6 { width: 50%; }
+.col-xs-7 { width: 58.333333%; }
+.col-xs-8 { width: 66.666667%; }
+.col-xs-9 { width: 75%; }
+.col-xs-10 { width: 83.333333%; }
+.col-xs-11 { width: 91.666667%; }
+.col-xs-12 { width: 100%; }
+.pull-xs-left { float: left !important; }
+.pull-xs-none { float: none !important; }
+.pull-xs-right { float: right !important; }
+.text-xs-center { text-align: center !important; }
+.text-xs-left { text-align: left !important; }
+.text-xs-right { text-align: right !important; }
+
+@media (min-width: 576px) {
+	.col-sm-1 { width: 8.333333%; }
+	.col-sm-2 { width: 16.666667%; }
+	.col-sm-3 { width: 25%; }
+	.col-sm-4 { width: 33.333333%; }
+	.col-sm-5 { width: 41.666667%; }
+	.col-sm-6 { width: 50%; }
+	.col-sm-7 { width: 58.333333%; }
+	.col-sm-8 { width: 66.666667%; }
+	.col-sm-9 { width: 75%; }
+	.col-sm-10 { width: 83.333333%; }
+	.col-sm-11 { width: 91.666667%; }
+	.col-sm-12 { width: 100%; }
+	.hidden-sm-up { display: none !important; }
+	.pull-sm-left { float: left !important; }
+	.pull-sm-none { float: none !important; }
+	.pull-sm-right { float: right !important; }
+	.text-sm-center { text-align: center !important; }
+	.text-sm-left { text-align: left !important; }
+	.text-sm-right { text-align: right !important; }
+}
+
+@media (min-width: 768px) {
+	.col-md-1 { width: 8.333333%; }
+	.col-md-2 { width: 16.666667%; }
+	.col-md-3 { width: 25%; }
+	.col-md-4 { width: 33.333333%; }
+	.col-md-5 { width: 41.666667%; }
+	.col-md-6 { width: 50%; }
+	.col-md-7 { width: 58.333333%; }
+	.col-md-8 { width: 66.666667%; }
+	.col-md-9 { width: 75%; }
+	.col-md-10 { width: 83.333333%; }
+	.col-md-11 { width: 91.666667%; }
+	.col-md-12 { width: 100%; }
+	.push-md-7 { left: 58.333333%; }
+	.hidden-md-up { display: none !important; }
+	.pull-md-left { float: left !important; }
+	.pull-md-none { float: none !important; }
+	.pull-md-right { float: right !important; }
+	.text-md-center { text-align: center !important; }
+	.text-md-left { text-align: left !important; }
+	.text-md-right { text-align: right !important; }
+}
+
+@media (min-width: 992px) {
+	.col-lg-1 { width: 8.333333%; }
+	.col-lg-2 { width: 16.666667%; }
+	.col-lg-3 { width: 25%; }
+	.col-lg-4 { width: 33.333333%; }
+	.col-lg-5 { width: 41.666667%; }
+	.col-lg-6 { width: 50%; }
+	.col-lg-7 { width: 58.333333%; }
+	.col-lg-8 { width: 66.666667%; }
+	.col-lg-9 { width: 75%; }
+	.col-lg-10 { width: 83.333333%; }
+	.col-lg-11 { width: 91.666667%; }
+	.col-lg-12 { width: 100%; }
+	.col-lg-1-5 { width: 20%; }
+	.hidden-lg-up { display: none !important; }
+	.pull-lg-left { float: left !important; }
+	.pull-lg-none { float: none !important; }
+	.pull-lg-right { float: right !important; }
+	.text-lg-center { text-align: center !important; }
+	.text-lg-left { text-align: left !important; }
+	.text-lg-right { text-align: right !important; }
+}
+
+@media (min-width: 1280px) {
+	.col-xl-1 { width: 8.333333%; }
+	.col-xl-2 { width: 16.666667%; }
+	.col-xl-3 { width: 25%; }
+	.col-xl-4 { width: 33.333333%; }
+	.col-xl-5 { width: 41.666667%; }
+	.col-xl-6 { width: 50%; }
+	.col-xl-7 { width: 58.333333%; }
+	.col-xl-8 { width: 66.666667%; }
+	.col-xl-9 { width: 75%; }
+	.col-xl-10 { width: 83.333333%; }
+	.col-xl-11 { width: 91.666667%; }
+	.col-xl-12 { width: 100%; }
+	.hidden-xl-up { display: none !important; }
+	.pull-xl-left { float: left !important; }
+	.pull-xl-none { float: none !important; }
+	.pull-xl-right { float: right !important; }
+	.text-xl-center { text-align: center !important; }
+	.text-xl-left { text-align: left !important; }
+	.text-xl-right { text-align: right !important; }
+}
+
+/*
+ * ---------------------------------------------------------------
+ * Todos los Estilos para cada pagina
+ * ---------------------------------------------------------------
+ */
+
+/* Home : */
+.inicio{margin: 100px}
+.nopadding{padding: 0px;}
+.colorx{background: #0033a1;}
+.colory{background: #0033a1;}
+.color1{background:seagreen;}
+/* Nosotros :; */
+.inicio{margin: 200px}
+
+/* servicios */
+.inicio{margin: 100px}
+/* contacto */
+.inicio{margin: 100px}
+
+/*
+ * ---------------------------------------------------------------
+ * Estilos para Response, con max-width:
+ * ---------------------------------------------------------------
+ */
+ @media (max-width:1200px) {
+
+}
+@media (max-width:900px) {
+
+}
+@media (max-width:740px) {
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*HEADER*/
+.col-sm-12{
+         background-color:#042a69;
+	     }	
+	
+.col-xs-6{
+         float:left;
+	     }	
+		 
+.uno-simbolo{
+	 width:27%;
+	 float:left;
+	 padding-top:1%;
+	 padding-left:9%;
+	}	 
+.uno{
+	 width:11%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 14px;
+	 padding-right:2%;
+	}
+.uno-pymes{
+	 padding-right:2%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 14px;
+	 padding-left: 3%;
+	}	
+.dos{
+	 width:23%;
+	 float:right;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:4%;
+	 font-size: 14px;
+	}		 
+.dos-canal{
+	 width:20%;
+	 float:right;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 14px;
+	 padding-left:3%;
+	}
+.dos-chat{
+	 width:20%;
+	 float:right;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 14px;
+	 padding-right:7%;
+	}	
+	
+	
+	
+	
+	
+#abajo{
+	   width:1300px;
+       background-color:#001b45;
+	   padding-bottom: 2%;
+	   }	
+
+.col-xs-6{
+	     
+	     float:left;
+	     }
+.nopadding{padding: 0px;}
+
+.tres-prestamos{
+	 width:30%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 19px;
+	 padding-left:1%;
+	 text-align:center;
+	}
+.tres-seguros{
+	 width:10%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 19px;
+	 padding-left:1%;
+	 text-align:center;
+	 }	
+.tres-tarjeta{
+	 width:12%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 19px;
+	 padding-left:3%;
+	 text-align:center;
+	}
+.tres-cuenta{
+	 width:12%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 19px;
+	 padding-left:3%;
+	 text-align:center;
+	}
+.tres-inversion{
+	 width:12%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 19px;
+	 padding-left:3%;
+	 text-align:center;
+	}								 
+.tres-otros{
+	 width:17%;
+	 float:left;
+	 text-decoration:none;
+	 color:#CCC;
+	 padding-top:3.9%;
+	 font-size: 19px;
+	 padding-left:5%;
+	 text-align:center;
+	}
+	
+.col-xs-6{
+	     float:left;
+}
+
+#botones{
+	    padding-left:24%;
+		padding-top:3%;
+		}		
+		 
+#boton1{
+	    border-radius:8px 8px 8px 8px;
+		color:#FFF;
+	    background-color:#2cc0d5;
+		padding-top:3%;
+		padding-bottom:3%;
+		padding-left:4%;
+		padding-right:4%;
+		margin-right:2%;
+}	
+#boton2{
+	    border-radius:8px 8px 8px 8px;
+		color:#FFF;
+		background-color:#ff7800;
+		padding-top:3%;
+		padding-bottom:3%;
+		padding-left:4%;
+		padding-right:4%;
+	    }	
+	
+	
+	
+.banner-imagen{
+
+	width:100%; height:300px;
+}	
+
+.nopadding2{padding: 0px;}	
