@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, header, nav, main, section, article,footer,img {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+/*Contenedor*/
+#contenedor{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+/*HEADER*/
+#cabecera{
+	      width:1140px;
+	      margin-left:auto;
+		  margin-right:auto;
+		  background-color:#fbf8f8;
+	     }
+
+#SubArribaIzquierda{
+	     width:50%;
+	     float:left;
+		 text-decoration:none;
+		 padding-top:1%;
+		 padding-bottom:1%;
+	     }			 
+.uno{
+	text-decoration:none;
+	padding-left:3%;
+	color:#333;
+	}		 	 
+
+
+
+#SubIntermedio{
+	     background-color:#FFF;
+		 padding-top: 2%;
+		 
+}	
+.med{
+	width:14%;
+	float:left;
+}
+.med-caja{
+	padding-top: 4%;
+}
+.dos-icon{
+	padding-left:40%;
+	text-decoration:none;
+}
+.icon{
+	text-align:center;
+	color:#666;
+}
+.texto{
+	width:110%; padding-top:5%; padding-bottom:5%; padding-left:5%;
+}
+#boton1{
+	    border-radius:8px 8px 8px 8px;
+		color:#FFF;
+	    background-color:#F00;
+		padding-top:8%;
+		padding-bottom:8%;
+		padding-left:20%;
+		padding-right:20%;
+}	
+#boton2{
+	    border-radius:8px 8px 8px 8px;
+		color:#F00;
+		background-color:#FFF;
+		padding-top:8%;
+		padding-bottom:8%;
+		padding-left:15%;
+		padding-right:15%;
+}	
+
+
+
+
+#SubAbajo{
+	     background-color:#fbf8f8;
+		 padding-top:1%;
+		 padding-bottom:1%;		 
+}
+.tres-ahorro{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666; 
+	  padding-left: 1%;
+}
+.tres-tarj{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666;  
+	  
+}
+.tres-prest{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666;  
+}
+.tres-dep{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666;  
+}
+.tres-seg{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666;  
+}
+.tres-serv{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666;  
+}
+.tres-can{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666; 
+	  padding-right:3%;
+}
+.tres-wealt{
+	  width:12%;
+	  float:left;
+	  text-decoration:none;	 
+	  color: #666;  
+}
+
+
+
+
+/*SLIDER*/
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 180px;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}  	  			 		 	
+	
+/*---------------------------------------------------MAIN-CUERPO---------------------------------------------------*/
+
+/*Segundad Seccion*/
+#sec2 {
+    width: 100%;
+    background-color: #d2dee4;
+	text-align:center;
+}
+#arribaArt {
+    padding-top:3%;
+	padding-bottom:3%;
+}
+.par1{
+    font-size: 20px;
+    color: #333333;
+} 
+ 	 
+
+#divArriba{
+	width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+	padding-bottom: 3%;
+}
+.img{
+    width:33.3%;
+	float:left;
+} 
+.img1{
+	padding-left: 20%;
+}
+
+.img3{
+   padding-right: 47%;
+}
+#p1{
+    font-size: 20px;
+    color: #000000;
+	padding-top:4%;
+	padding-right:30%;
+}
+#p2{
+    font-size: 18px;
+    color: #666;
+	padding-left: 5%;
+	padding-top:4%;
+}  
+#p3{
+    font-size: 18px;
+    color: #666;
+	padding-right: 24%;
+	padding-top:2%;
+	padding-bottom:4%;
+}
+#boton6{
+    border-radius: 8px 8px 8px 8px;
+    color: #F00;
+    background-color: #FFF;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-left:12%;
+}
+#p4{
+    font-size: 20px;
+    color: #000000;
+	padding-top:4%;
+	padding-right: 46%;
+}
+#p5{
+    font-size: 18px;
+    color: #666;
+    padding-right: 10%;
+	padding-top:4%;
+}  
+#p6{
+    font-size: 18px;
+    color: #666;
+	padding-right:4%;
+	padding-top:2%;
+	padding-bottom:4%;
+} 
+#boton7{
+    border-radius: 8px 8px 8px 8px;
+    color: #F00;
+    background-color: #FFF;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-right:6%;
+}
+#p7{
+    font-size: 20px;
+    color: #000000;
+	padding-top:4%;
+	padding-right:68%;
+}
+#p8{
+    font-size: 18px;
+    color: #666;
+    padding-right: 39%;
+	padding-top:4%;
+}  
+#p9{
+    font-size: 18px;
+    color: #666;
+	padding-right:39%;
+	padding-top:2%;
+	padding-bottom:4%;
+}     
+#boton8{
+    border-radius: 8px 8px 8px 8px;
+    color: #F00;
+    background-color: #FFF;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-right:18%;
+}
+
+
+
+#divAbajo{
+	width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+	padding-bottom: 5%;
+}	
+.imgx{
+    width:33.3%;
+	float:left;
+} 	 		 	
+.img4{
+	padding-left: 20%;
+}
+
+.img6{
+   padding-right: 47%;
+}
+#p10{
+    font-size: 20px;
+    color: #000000;
+	padding-top:4%;
+}
+#p11{
+    font-size: 18px;
+    color: #666;
+	padding-left: 10%;
+	padding-top:4%;
+}  
+#p12{
+    font-size: 18px;
+    color: #666;
+	padding-right: 27%;
+	padding-top:2%;
+	padding-bottom:4%;
+}	
+#boton9{
+    border-radius: 8px 8px 8px 8px;
+    color: #F00;
+    background-color: #FFF;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-left: 18%;
+}
+#p13{
+    font-size: 20px;
+    color: #000000;
+	padding-top:4%;
+	padding-right:35%;
+}
+#p14{
+    font-size: 18px;
+    color: #666;
+	padding-right: 33%;
+	padding-top:4%;
+}  
+#p15{
+    font-size: 18px;
+    color: #666;
+	padding-right: 46%;
+	padding-top:2%;
+	padding-bottom:4%;
+}
+#boton10{
+    border-radius: 8px 8px 8px 8px;
+    color: #F00;
+    background-color: #FFF;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
+}
+#p16{
+    font-size: 20px;
+    color: #000000;
+	padding-top:4%;
+	padding-right:75%;
+}
+#p17{
+    font-size: 18px;
+    color: #666;
+	padding-right: 28%;
+	padding-top:4%;
+}  
+#p18{
+    font-size: 18px;
+    color: #666;
+	padding-right: 32%;
+	padding-top:2%;
+	padding-bottom:4%;
+}
+#boton11{
+    border-radius: 8px 8px 8px 8px;
+    color: #F00;
+    background-color: #FFF;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 9%;
+    padding-right: 9%;
+    margin-right: 18%;
+}
+
+
+/*Media Query*/
+
+@media screen and (max-width: 1100px){
+
+    #cabecera{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+
+    .par1{
+        width: 100%;
+    }
+
+    .img{
+        width: 100%;
+    }
+    
+    .imgx{
+        width: 100%;
+    }
+
+}

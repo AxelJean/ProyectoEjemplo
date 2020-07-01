@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+
+<!-- 3. Implementando el paradigma de la POO en páginas Web
+
+- El manejo de EspaciosDeNombres(Namespace) en JavaScript ha sido ignorado durante muchos años porque los programas eran relativamente sencillos y, normalmente, una página web no se componía de diferentes piezas de código desarrolladas por programadores. El código se incluía como un script en la página(WEB) y la mayoría de las variables y funciones eran globales.
+
+- Actualmente, en JavaScript se programan aplicaciones muy complejas(enormes a veces) y se han desarrollado cientos de librerías que podemos importar en nuestro código. 
+
+- Esto hace necesario organizar de alguna manera nuestro código para asegurarnos de que nuestras variables, objetos y funciones sean únicas y no se estén sobrescribiendo(o siendso sobrescritas) por una variable del mismo nombre de alguna de las librerías externas que utilicemos.
+
+- Para poder utilizar cualquier nombre con seguridad, cada programa debe definir sus variables dentro de un contenedor único. Este contenedor es el EspaciosDeNombres(namespace).
+
+.Cada librería externa que utilicemos tendrá su propio espacio de nombres y nosotros
+debemos definir también el nuestro para nuestro proyecto.
+----------------------------------------------------------------
+
+
+
+* Namespace(EspaciosDeNombres):
+
+- Es es un contenedor que permite asociar toda la funcionalidad de un determinado objeto con un nombre único.
+
+- En JavaScript un EspaciosDeNombres(namespace) es un "objeto" que permite a métodos, propiedades y objetos     asociarse.
+  
+- La idea de crear EspaciosDeNombres(namespace) en JavaScript es simple: Crear un único objeto global para las
+  variables, métodos, funciones convirtiéndolos en "propiedades" de ese objeto.  
+  
+- El uso de los namespace permite minimizar el conflicto de nombres con otros objetos haciéndolos únicos    dentro de nuestra aplicación.  
+
+
+
+* Vamos a crear un objeto global llamado MIAPLICACION
+
+// namespace global
+var MIAPLICACION = MIAPLICACION || {};
+
+
+* También podemos crear Sub-espacios de nombres:
+// Sub-namespace
+MIAPLICACION.event = {};
+
+
+* Creacion de "objeto global" vacio: "var CLIENTE1 = {};"
+
+--> 
+
+
+<!--Ejm
+
+Veremos otra forma muy utilizada en Javascript para definir(crear) objetos(global). Esta forma se la
+llama "Objetos literales".
+
+Esta metodología consiste en definir una lista de propiedades y sus valores. Veamos con un ejemplo esta técnica:
+-->
+
+<script type="text/javascript">
+
+var CLIENTE1 = {
+	
+	Nombre: 'Axel',
+	Deposito: 0,
+	
+	Imprimir: function(){
+		document.write(this.Nombre + '<br>');
+		document.write(this.Deposito + '<br>');
+	},
+	
+	Depositar: function(monto){
+		this.Deposito = this.Deposito + monto;
+	},
+	
+	Extraer: function(monto){
+		this.Deposito = this.Deposito - monto;
+	}
+};
+
+
+/*Ahora solo nos falta hacer la llamada(ejecucion) a las funciones del objeto CLIENTE1:*/
+
+CLIENTE1.Imprimir();
+CLIENTE1.Depositar(1000);
+document.write('Estado luego de depositar 1000 pesos</br>');
+CLIENTE1.Imprimir();
+CLIENTE1.Extraer(200);
+document.write('Estado luego de extraer 200 pesos</br>');
+CLIENTE1.Imprimir();
+
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+<!--Ejm1-->
+<script type="text/javascript">
+
+var CLIENTE2 = {
+	
+	Nombre1: 'Jean',
+	Deposito1: 0,
+	
+	Imprimir1: function(){
+		document.write(this.Nombre1 + '<br>');
+		document.write(this.Deposito1 + '<br>');
+	},
+	
+	Depositar1: function(monto1){
+		this.Deposito1 = this.Deposito1 + monto1;
+	},
+	
+	Extraer1: function(monto1){
+		this.Deposito1 = this.Deposito1 - monto1; 
+	}
+};
+
+CLIENTE2.Imprimir1();
+CLIENTE2.Depositar1(2000);
+document.write('Estado luego de depositar 2000 pesos</br>');
+CLIENTE2.Imprimir1();
+CLIENTE2.Extraer1(500);
+document.write('Estado luego de extraer 500 pesos</br>');
+CLIENTE2.Imprimir1();
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+<!--Ejm2-->
+<script type="text/javascript">
+
+var CLIENTE3 = {
+	
+	Nombre2: 'Raúl',
+	Deposito2: 0,
+	
+	Imprimir2: function(){
+		document.write(this.Nombre2 + '<br>');
+		document.write(this.Deposito2 + '<br>');
+	},
+	
+	Depositar2: function(monto2){
+		this.Deposito2 = this.Deposito2 + monto2;
+	},
+	
+	Extraer2: function(monto2){
+		this.Deposito2 = this.Deposito2 - monto2;
+	}		
+};
+
+CLIENTE3.Imprimir2();
+CLIENTE3.Depositar2(3000);
+document.write('Estado luego de depositar 3000 pesos</br>');
+CLIENTE3.Imprimir2();
+CLIENTE3.Extraer2(500);
+document.write('Estado luego de extraer 500 pesos</br>');
+CLIENTE3.Imprimir2();
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+<!--Ejm3-->
+<script type="text/javascript">
+
+var CLIENTE4 = {
+	
+	Nombre3: 'Paul',
+	Deposito3: 0,
+	
+	Imprimir3:function(){
+		document.write(this.Nombre3 + '<br>');
+		document.write(this.Deposito3 + '<br>');
+	},
+	
+	Depositar3:function(monto3){
+		this.Deposito3 = this.Deposito3 + monto3;
+	},
+	
+	Extraer3:function(monto3){
+		this.Deposito3 = this.Deposito3 - monto3;
+	}	
+};
+
+CLIENTE4.Imprimir3();
+CLIENTE4.Depositar3(4000);
+document.write('Estado luego de depositar 4000 pesos</br>');
+CLIENTE4.Imprimir3();
+CLIENTE4.Extraer3(500);
+document.write('Estado luego de extraer 500 pesos</br>');
+CLIENTE4.Imprimir3();
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+<!--Ejm4-->
+<script type="text/javascript">
+
+var CLIENTE5 = {
+	
+	Nombre4:'Benjamin',
+	Deposito4: 0,
+	
+	Imprimir4: function(){
+		document.write(this.Nombre4 + '<br>');
+		document.write(this.Deposito4 + '<br>');
+	},
+	
+	Depositar4: function(monto4){
+		this.Deposito4 = this.Deposito4 + monto4;
+	},
+	
+	Extraer4: function(monto4){
+		this.Deposito4 = this.Deposito4 - monto4;
+	}	
+};
+
+CLIENTE5.Imprimir4();
+CLIENTE5.Depositar4(5000);
+document.write('Estado luego de depositar 5000 pesos</br>');
+CLIENTE5.Imprimir4();
+CLIENTE5.Extraer4(500);
+document.write('Estado luego de extraer 500 pesos</br>');
+CLIENTE5.Imprimir4();
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+<!--Ejm5-->
+<script type="text/javascript">
+
+var CLIENTE6 = {
+	
+	Nombre5: 'Jorge',
+	Deposito5: 0,
+	
+	Imprimir5: function(){
+		document.write(this.Nombre5 + '<br>');
+		document.write(this.Deposito5 + '<br>');
+	},
+	
+	Depositar5: function(monto5){
+		this.Deposito5 = this.Deposito5 + monto5;
+	},
+	
+	Extraer5: function(monto5){
+		this.Deposito5 = this.Deposito5 - monto5;
+	}	
+};
+
+CLIENTE6.Imprimir5();
+CLIENTE6.Depositar5(6000);
+document.write('Estado luego de depositar 6000 pesos</br>');
+CLIENTE6.Imprimir5();
+CLIENTE6.Extraer5(500);
+document.write('Estado luego de extraer 500 pesos</br>');
+CLIENTE6.Imprimir5();
+
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+<!-- -------------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- La propiedad "prototype" 
+
+Es accesible para todos los objetos y nos da una referencia a la clase con la que fue creada. Con el prototipo
+podemos modificar las propiedades y métodos de una clase, de tal forma que todos los objetos creados anterior y posteriormente incorporarán esas modificaciones.
+
+Veamos esto en acción. Primero, la clase "coche":
+-->
+
+
+<b><i>"Así es el primerCoche:"</i></b>
+<div id="div1"></div><br />
+
+
+<b><i>"Modificamos la clase coche para añadir propiedades y métodos:"</i></b>
+<div id="div2"></div><br />
+
+
+<b><i>"Este es un segundoCoche de la clase coche modificada:"</i></b>
+<div id="div3"></div>
+
+
+<script type="text/javascript">
+
+function coche(unaMarca, unModelo, unColor) {
+	
+ 	this.marca = unaMarca;
+ 	this.modelo = unModelo;
+ 	this.color = unColor;
+	
+	//3 primeras funciones son opcionales igual funcionan
+ 	this.seleccionarMarca = function seleccionarMarca(otraMarca){
+ 		this.marca = otraMarca
+    };
+   
+   this.seleccionarModelo = function seleccionarModelo(otroModelo){
+ 		this.modelo = otroModelo
+   };
+ 
+   this.seleccionarColor = function seleccionarColor(otroColor){
+ 		this.color = otroColor
+   };
+ 
+   this.verComoEs = function verComoEs(){
+		
+ 		return "Marca: " + this.marca + "<br />" +
+ 			   "Modelo: " + this.modelo + "<br />" +
+ 			   "Color: " + this.color;
+   };
+}
+
+
+//
+var primerCoche = new coche("Volkswagen", "Golf", "Rojo");
+document.getElementById("div1").innerHTML = primerCoche.verComoEs();
+
+
+
+/*
+Luego, accedemos al prototipo de la clase con coche.prototype para modificar cosas. Ponemos una nueva propiedad matricula(la incluimos en la clase, no en el objeto como hacíamos con la función modificadora), y dos nuevos métodosponerMatricula() y verMatricula().
+*/
+
+
+ coche.prototype.matricula = "";
+ 
+ 
+ //asigno-set
+ coche.prototype.ponerMatricula = function ponerMatricula(unaMatricula) {
+	 this.matricula = unaMatricula;
+ }
+ 
+ //obtengo-get
+ coche.prototype.verMatricula = function verMatricula() {
+ 	return this.matricula;
+ }
+ 
+ 
+ primerCoche.ponerMatricula("ABC1234");
+ 
+ document.getElementById("div2").innerHTML = primerCoche.verComoEs() + "<br>" +
+ "Matrícula: " + primerCoche.verMatricula();
+ 
+ 
+/*
+De ahora en adelante, todos los objetos instanciados de la clase coche ya tienen esa nueva propiedad y métodos. Por ejemplo, podemos crear un nuevo objetosegundoCoche:
+*/ 
+
+var miSegundoCoche = new coche("Fiat", "Punto", "Azul");
+
+miSegundoCoche.ponerMatricula("MAT0001");
+
+document.getElementById("div3").innerHTML = miSegundoCoche.verComoEs() + "<br>" + 
+"Matrícula: " + miSegundoCoche.verMatricula();
+ 
+ 
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+
+<!--Ejm1-->
+<p>Caracteristica Persona 1 :</p>
+<div id="uno"></div><br>
+
+<p>Modificamos la clase Persona 1 para añadir propiedades y métodos:</p>
+<div id="dos"></div>
+
+<p>Creo otro objeto usando las nuevas propiedades y metodos:</p>
+<div id="tres"></div>
+
+
+<script type="text/javascript">
+
+function Persona1(nombre1, apellido1){
+	
+	this.Nombre1 = nombre1;
+	this.Apellido1 = apellido1;
+	
+	this.SeleccionarNombre1 = function Nombre1(OtroNombre1){
+		this.Nombre1 = OtroNombre1;
+	}
+	
+	this.SeleccionarApellido1 = function Apellido1(OtroApellido1){
+		this.Apellido1 = OtroApellido1;
+	}
+	
+	
+	this.verComoEs1 = function ComoEs1(){
+		
+ 		return "Nombre1: " + this.Nombre1 + "<br />" +
+ 			   "Apellido1: " + this.Apellido1;
+ 	}			
+}
+
+//
+var pers1 = new Persona1("Axel", "Romani");
+document.getElementById("uno").innerHTML = pers1.verComoEs1();
+
+
+//agrego propiedades y funciones con la propiedad "prototype"
+
+Persona1.prototype.Edad1 = "";
+
+//set
+Persona1.prototype.ponerEdad1 = function ponEdad1(unaEdad1){
+	this.Edad1 = unaEdad1;
+}	
+
+//get
+Persona1.prototype.verEdad1 = function veEdad1(){
+	return this.Edad1;
+}
+
+
+pers1.ponerEdad1(26);
+
+document.getElementById("dos").innerHTML = pers1.verComoEs1() + "<br>" + "Edad1: " + pers1.verEdad1();
+
+
+
+//creo otro objeto
+var pers2 = new Persona1('Juan', 'Marquez');
+
+pers2.ponerEdad1(30);
+
+document.getElementById("tres").innerHTML = pers2.verComoEs1() + "<br>" + "Edad1: " + pers2.verEdad1();
+
+document.write('</br>');
+document.write('</br>');
+document.write('</br>');
+</script>
+
+
+
+<!--Ejm2-->
+<p>Caracteristica Persona 2 :</p>
+<div id="cinco"></div><br><br>
+
+<p>Modificando Caracteristica Persona 2 :</p>
+<div id="seis"></div><br><br>
+
+<p>Creando otro objeto Persona 2 :</p>
+<div id="siete"></div>
+
+<script type="text/javascript">
+
+function Persona2(nombre2, apellido2){
+	
+	this.Nombre2 = nombre2;
+	this.Apellido2 = apellido2;
+	
+	this.SeleccionarNombre2 = function Nombre2(miNombre2){
+		
+		this.Nombre2 = miNombre2;
+	}
+	
+	this.SeleccionarApellido2 = function Apellido2(miApellido2){
+		this.Apellido2 = miApellido2;
+	}
+		
+		
+	this.verComoEs2 = function ComoEs2(){
+		
+ 		return "Nombre2: " + this.Nombre2 + "<br />" + "Apellido2: " + this.Apellido2;
+ 	}
+}
+
+
+var pers3 = new Persona2('Miguel', 'Martinez');
+document.getElementById("cinco").innerHTML = pers3.verComoEs2();
+
+
+//defino nuevas propiedades y metodos
+
+Persona2.prototype.Dni = "";
+
+Persona2.prototype.estableceDni = function esdni(midni){
+	this.Dni = midni;
+}	
+
+Persona2.prototype.obtenerDni = function obdni(){
+	return this.Dni;
+}
+
+pers3.estableceDni(48132634);
+document.getElementById("seis").innerHTML = pers3.verComoEs2() + '<br>' + 'Mi DNI es: ' + pers3.obtenerDni();
+
+
+//definiendo nuevo objeto
+
+var pers4 = new Persona2('Bebita', 'Polic');
+
+pers4.estableceDni(96432654);
+
+document.getElementById("siete").innerHTML = pers4.verComoEs2() + '<br>' + 'Mi DNI es: ' + pers4.obtenerDni();
+</script>
+
+
+
+</body>
+</html>

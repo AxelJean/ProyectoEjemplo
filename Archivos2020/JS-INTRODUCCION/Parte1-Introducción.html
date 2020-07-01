@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+											<!-- Introducción -->
+    
+                                                
+<!-- 1.Definición de programación orientada a objetos
+
+POO es un paradigma de programación que usa objetos en sus interacciones, para diseñar aplicaciones y programas informáticos. Está basado en varias técnicas, incluyendo herencia, cohesión, abstracción, polimorfismo, acoplamiento y encapsulamiento.
+
+En la programación orientada a objetos, cada objeto es capaz de recibir mensajes, procesar datos y enviar mensajes a otros objetos. Cada objeto puede verse como una pequeña máquina independiente con un papel o responsabilidad definida.
+-->
+
+
+<!-- 2.Definición de clases, objetos y eventos --> 
+
+
+<!-- 2.1 Clases
+
+La programación basada en prototipos es un estilo de programación orientada a objetos en la que las "clases" no están presentes.
+
+Este modelo también se conoce como programación sin "clases", orientada a prototipos o basada en ejemplos.
+
+JavaScript es un lenguaje basado en prototipos que no contiene ninguna declaración de "clase", como se encuentra, por ejemplo, en C + + o Java.
+
+En su lugar, JavaScript utiliza "funciones" como "clases".
+
+Definir una "clase" es tan fácil como definir una "función". En el ejemplo siguiente se define una nueva "clase" llamada 'Persona'. 
+
+									"function Persona(){}"
+
+Una "clase" es la definición de un "objeto". Esta clase tiene propiedades, funciones y eventos. Por ejemplo, la clase Persona se crea de esta manera: se le conoce como "clase, función, constructor de la clase"
+
+					function Persona(nombre) {
+					    this.nombre = nombre;
+ 						this.color_pelo = 'negro';
+ 						this.peso = 75;
+ 						this.altura = 165;
+ 						this.sexo = 'varón';
+ 						this.edad= 26;
+ 					}
+
+Vamos a fijarnos bien como se estructura esta función. Se le llama constructor de la clase, y en ella definimos los datos de la clase, los que vamos a poder utilizar al crear objetos con ella.
+
+Nótese el uso de la palabra reservada this. Esta palabra sirve para identificar al objeto en sí mismo dentro de la definición de la clase. Cuando escribimos:
+
+										"this.peso = 75;"
+
+Estamos creando la propiedad "peso" de la clase "Persona". Cuando creamos una propiedad en el constructor y le damos un valor, como en este caso, estamos asignándole un valor por defecto. Todos los objetos que se van a crear con este constructor contendrán una propiedad "peso" con ese valor inicial, aunque luego podremos cambiarlo al usar el objeto. 
+--> 
+
+<!--Ejm-->
+<script type="text/javascript">
+
+function Clase(nombre){
+	
+	this.Nombre = nombre;
+	this.Color = "Azul";
+	this.Peso = 64;
+	this.Altura = 1.84;
+	this.Sexo = "Varón";
+	this.Edad = 26;
+	}
+</script>                                             
+
+<!--Ejm1-->
+<script type="text/javascript">
+
+function Clase1(nombre1){
+	
+	this.Nombre1 = nombre1;
+	this.Apellido = "Romani";
+	this.Edad1 = 26;
+	}
+</script>
+
+<!--Ejm2--> 
+<script type="text/javascript">
+
+function Clase2(nombre2){
+	
+	this.Nombre2 = nombre2;
+	this.Apellido2 = "Jaja";
+	this.Edad2 = 26;
+	}
+</script>
+
+<!--Ejm3--> 
+<script type="text/javascript">
+
+function Clase3(nombre3){
+	
+	this.Nombre3 = nombre3;
+	this.Apellido3 = "Jeje";
+	this.Edad3 = 28;
+	}
+</script>
+
+
+<!--Ejm4--> 
+<script type="text/javascript">
+
+function Clase4(nombre4){
+	
+	this.Nombre4 = nombre4;
+	this.Apellido4 = "Jola";
+	this.Edad4 = 30;
+	}
+</script>
+
+<!--Ejm5-->
+<script type="text/javascript">
+
+function Clase5(nombre5){
+	
+	this.Nombre5 = nombre5;
+	this.Apelldido5 = "UUUU";
+	this.Edad5 = 67;
+	}
+</script>
+
+
+
+<!-- 2.2 Objetos 
+
+Un objeto es la instancia (copia o ejemplar) de una clase. Para definir un objeto de esta clase Persona, sólo tendríamos que llamar a su constructor(function Persona) precedido de la palabra reservada new y pasarle entre los paréntesis algún parámetro o dato que necesite la función llamado también constructor:
+
+                   function Persona(nombre) {
+					    this.nombre = nombre;
+ 						this.color_pelo = 'negro';
+ 						this.peso = 75;
+ 						this.altura = 165;
+ 						this.sexo = 'varón';
+ 						this.edad= 26;
+ 					}
+
+                    // objeto hombre de tipo Persona
+                    "var hombre = new Persona('Pepe');"
+
+Aquí hemos definido el objeto "hombre", que contendrá todas las propiedades definidas en la función-clase "Persona". Si queremos cambiar su valor, sólo tenemos que hacer algo como esto:
+
+									"hombre.peso = 80;"
+
+De esta forma, el dato definido para este objeto cambia. Pero si hemos definido más objetos de tipo Persona, cada uno de ellos contendrá las mismas propiedades pero con valores distintos. Ningún objeto tiene el mismo valor que otro objeto de la misma clase a no ser que nosotros se lo asignemos explícitamente.
+
+							"var mujer = new Persona('Ana');
+						     mujer.peso = 67;
+							 mujer.sexo = 'mujer';"
+                             
+En este caso hemos hecho lo mismo, pero le indicamos su propio peso, independiente del de la variable "hombre". Así, podemos tener tantos objetos de la misma clase como queramos para realizar las operaciones que sean pertinentes. Una última cosa sobre los constructores: como podemos ver, podemos pasarle parámetros, que podemos convertir en los valores de las propiedades de los objetos de esa clase.
+-->
+
+<!--Ejm-->
+<script type="text/javascript">
+
+function Clase(nombre){
+	
+	this.Nombre = nombre;
+	this.Color = "Azul";
+	this.Peso = 64;
+	this.Altura = 1.84;
+	this.Sexo = "Varón";
+	this.Edad = 26;
+	}
+	
+var clasesita = new Clase("Uno");
+document.write(clasesita.Nombre + "<br>");
+document.write(clasesita.Color = "Rojo" + "<br>");
+document.write(clasesita.Peso = 100);
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+
+var clasesita2 = new Clase("Dos");
+clasesita2.Color = "Negro";
+clasesita2.Edad = 20;
+</script>  
+
+
+
+<!--Ejm1-->
+<script type="text/javascript">
+
+function Clase1(nombre1){
+	
+	this.Nombre1 = nombre1;
+	this.Apellido = "Romani";
+	this.Edad1 = 26;
+	}
+	
+var persona1 = new Clase1("Braw");
+persona1.Nombre1;
+persona1.Edad1 = 76;
+
+var persona2 = new Clase1("Yene");
+persona2.Edad1 = "Ee";
+persona2.Apellido = "jjjj";
+</script>
+
+
+<!--Ejm2--> 
+<script type="text/javascript">
+
+function Clase2(nombre2){
+	
+	this.Nombre2 = nombre2;
+	this.Apellido2 = "Jaja";
+	this.Edad2 = 26;
+	}
+	
+var persona3 = new Clase2("kar");
+persona3.Nombre2;
+persona3.Edad2 = 64;
+
+var persona4 = new Clase2("EEE");
+persona4.Apellido2 = "QQQQ";
+persona4.Edad2 = 32;
+</script>
+
+
+<!--Ejm3--> 
+<script type="text/javascript">
+
+function Clase3(nombre3){
+	
+	this.Nombre3 = nombre3;
+	this.Apellido3 = "Jeje";
+	this.Edad3 = 28;
+	}
+	
+var persona5 = new Clase3("GGG");
+persona5.Nombre3;
+persona5.Edad3 = 78;
+
+var persona6 = new Clase3("XXXXXX");
+persona6.Edad3 = 43;
+persona6.Apellido3 = "vddd";
+</script>
+
+
+
+<!--Ejm4--> 
+<script type="text/javascript">
+
+function Clase4(nombre4){
+	
+	this.Nombre4 = nombre4;
+	this.Apellido4 = "Jola";
+	this.Edad4 = 30;
+	}
+	
+var persona7 = new Clase4("NNN");
+persona7.Apellido4 = "VVV";
+persona7.Nombre4;
+
+var persona8 = new Clase4("HHH");
+persona8.Edad4 = 54;
+</script>
+
+
+
+<!--Ejm5-->
+<script type="text/javascript">
+
+function Clase5(nombre5){
+	
+	this.Nombre5 = nombre5;
+	this.Apelldido5 = "UUUU";
+	this.Edad5 = 67;
+	}
+
+var persona9 = new Clase5("BBGBGB");
+persona9.Nombre5;
+persona9.Edad5 = 45;
+
+var persona10 = new Clase5("BGGBG");
+persona10.Edad5 = 565;
+persona10.Apelldido5 = "bgbgb";
+</script>
+
+
+
+<!-- 2.2.1 Creación de funciones miembro
+
+Hasta ahora hemos visto como crear propiedades de las clases, pero necesitamos crear código en ese objeto que utilice las propiedades que hemos creado en el constructor. Para crear una función(metodo) miembro, debemos indicarlo en la propia clase(constructor de la clase, funcion) de construcción:
+
+
+					function Persona(nombre) {
+                    
+                      this.nombre = nombre;
+                      this.color_pelo = 'negro';
+                      this.peso = 75;
+                      this.altura = 165;
+                      this.sexo = 'varón';
+                      this.dormir = dormir; // Nueva función(metodo) miembro
+                    }
+
+                    Y ahora definimos la función dormir:  
+                    
+                    function dormir() {
+                      alert(this.nombre + ' está durmiendo');
+                    }             
+                    
+                    Fijémonos en la función. Tiene una forma bastante normal. Lo único especial
+                    que hemos hecho es añadir la línea.    
+                    
+                    "this.dormir = dormir;"
+                    
+                    Al constructor de la clase, con lo que hemos asignado la función dormir como si fuera una
+                    propiedad. Recordemos que TODO es un objeto en JavaScript, y esto incluye a
+                    las funciones. Ahora, para ejecutar este código, utilizamos el objeto
+                    anteriormente creado para ponerlo en marcha:
+                    
+                    "hombre.dormir();"
+-->
+
+
+<!--Ejm-->
+<script type="text/javascript">
+
+function Persona(nombre){
+	
+	this.Nombre = nombre;
+	this.Apellido = "Romani";
+	this.NombreCompleto = Completo;	
+}
+
+function Completo(){
+	document.write(this.Apellido + ' esta descansando');
+}	
+
+var pers = new Persona("Axel");
+document.write(pers.Nombre  + "<br>");
+pers.NombreCompleto();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!--Ejm1-->
+<script type="text/javascript">
+
+function Persona1(nombre1){
+	
+	this.Nombre1 = nombre1;
+	this.Apellido1 = "Ramirez";
+	this.NombreCompleto1 = Completo1;
+}
+
+function Completo1(){
+	document.write(this.Apellido1 + ' esta jugando futbol');
+}	
+
+var pers1 = new Persona1("Raúl");
+document.write(pers1.Nombre1 + "<br>");
+pers1.NombreCompleto1();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!--Ejm2-->
+<script type="text/javascript">
+
+function Persona2(nombre2){
+	
+	this.Nombre2 = nombre2;
+	this.Apellido2 = "Marrou";
+	this.NombreCompleto2 = Completo2;
+}	
+
+function Completo2(){
+	document.write(this.Apellido2 + " esta jugando play");
+}
+
+var pers2 = new Persona2("Benjamin");
+document.write(pers2.Nombre2 + "<br>");
+pers2.NombreCompleto2();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!--Ejm3-->
+<script type="text/javascript">
+
+function Persona3(nombre3){
+	
+	this.Nombre3 = nombre3;
+	this.Apellido3 = "Coronado";
+	this.NombreCompleto3 = Completo3;
+}
+
+function Completo3(){
+	document.write(this.Apellido3 + " esta trotando");
+}	
+
+var pers3 = new Persona3("Paul");
+document.write(pers3.Nombre3 + "<br>");
+pers3.NombreCompleto3();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!--Ejm4-->
+<script type="text/javascript">
+
+function Persona4(nombre4){
+	
+	this.Nombre4 = nombre4;
+	this.Apellido4 = "Llosa";
+	this.NombreCompleto4 = Completo4;
+}	
+
+function Completo4(){
+	document.write(this.Apellido4 + " esta estudiando");
+}	
+
+var pers4 = new Persona4("Jorge");
+document.write(pers4.Nombre4 + "<br>");
+pers4.NombreCompleto4();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!-- Otra manera de declarar la clase en JavaScript: la funcion(metodo) Se encuentra encapsulado en la misma 
+     función [function Persona(){} ].
+     
+function Persona(nombre) {
+
+ this.nombre = nombre;
+ this.color_pelo = 'negro';
+ this.peso = 75;
+ this.altura = 165;
+ this.sexo = 'varón';
+ this.dormir = function dormir(){
+ document.write(this.nombre + ' está durmiendo');
+}     
+
+
+var hombre = new Persona('Pepe');
+hombre.dormir();   
+-->
+
+<!--Ejm5-->
+<script type="text/javascript">
+
+function Persona5(nombre5){
+	
+	this.Nombre5 = nombre5;
+	this.Apellido5 = "Kereb";
+	this.MetodoCompleto1 = function Metodo1(){
+		document.write(this.Apellido5 + " esta comiendo");
+	}		
+}
+
+var pers5 = new Persona5("Tereso");
+document.write(pers5.Nombre5 + "<br>");
+pers5.MetodoCompleto1();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!--Ejm6-->
+<script type="text/javascript">
+
+function Persona6(nombre6){
+	
+	this.Nombre6 = nombre6;
+	this.Apellido6 = "OLEMy";
+	this.MetodoCompleto2 = function Metodo2(){
+		document.write(this.Apellido6 + " esta rezando");
+	}	
+}	
+
+var pers6 = new Persona6("Raw");
+document.write(pers6.Nombre6 + "<br>");
+pers6.MetodoCompleto2();
+document.write("<br>");
+document.write("<br>");
+</script>
+
+
+<!--Ejm7-->
+<script type="text/javascript">
+
+function Persona7(nombre7){
+	
+	this.Nombre7 = nombre7;
+	this.Apellido7 = "JAJAJa";
+	this.MetodoCompleto3 = function Metodo3(){
+		document.write(this.Apellido7 + " esta carta");
+	}	
+}	
+
+var pers7 = new Persona7("Smack");
+document.write(pers7.Nombre7 + "<br>");
+pers7.MetodoCompleto3();
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

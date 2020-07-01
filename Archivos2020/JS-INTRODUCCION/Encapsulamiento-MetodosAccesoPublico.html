@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+
+
+<!--Desde el pto JS -->
+
+<!-- METODOS DE ACCESO PUBLICO set/get
+
+Para que una Clase se considere encapsulada debe tener:
+
+- Atributos privados
+- Métodos públicos para acceder a los atributos privados.
+-->
+
+
+<!--Ejm "CLASE"-->
+
+<script type="text/javascript">
+
+function Alumno(cod, nomb, ape){
+	
+	this.Codigo = cod;
+	this.Nombre = nomb;
+	this.Apellido = ape;
+	this.Nota1 = 20;
+	this.Nota2 = 18;
+	
+	
+	//set/get
+	this.SetCodigo = function AsignarCodigo(miCodigo){
+		this.Codigo = miCodigo;
+	}
+	
+	this.getCodigo = function ObtenerCodigo(){
+		return this.Codigo;
+	}
+	
+	
+	
+	this.SetNombre = function AsignarNombre(miNombre){
+		this.Nombre = miNombre;
+	}
+	
+	this.getNombre = function ObtenerNombre(){
+		return this.Nombre;
+	}
+	
+	
+	
+	this.SetApellido = function AsignarApellido(miApellido){
+		this.Apellido = miApellido;
+	}
+	
+	this.getApellido = function ObtenerApellido(){
+		return this.Apellido;
+	}
+	
+	
+	
+	this.SetNota1 = function AsignarNota1(miNota1){
+		this.Nota1 = miNota1;
+	}
+	
+	this.getNota1 = function ObtenerNota1(){
+		return this.Nota1;
+	}
+	
+	
+	
+	this.SetNota2 = function AsignarNota2(miNota2){
+		this.Nota2= miNota2;
+	}
+	
+	this.getNota2 = function ObtenerNota2(){
+		return this.Nota2;
+	}
+	
+	
+	//otros tipos de metodos
+	this.Promedio = function miPromedio(){
+		return (this.Nota1 + this.Nota2) / 2.0;
+	}	
+}
+
+
+var miAlumno = new Alumno(12345, 'Axel', 'Romani');
+
+document.write(miAlumno.Codigo + "<br>");
+document.write(miAlumno.Nombre + "<br>");
+document.write(miAlumno.Apellido + "<br>");
+document.write(miAlumno.Nota1 + "<br>");
+document.write(miAlumno.Nota2 + "<br>");
+document.write('Mi promedio es : ' + miAlumno.Promedio());
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+
+
+//Sin usar nuevo objeto, solo modificando valores
+miAlumno.SetCodigo(67890);
+miAlumno.SetNombre('Raúl');
+miAlumno.SetApellido('Ramirez');
+miAlumno.SetNota1(16);
+miAlumno.SetNota2(15);
+
+document.write(miAlumno.getCodigo() + "<br>");
+document.write(miAlumno.getNombre() + "<br>");
+document.write(miAlumno.getApellido() + "<br>");
+document.write(miAlumno.getNota1() + "<br>");
+document.write(miAlumno.getNota2() + "<br>");
+document.write('Mi promedio es : ' + miAlumno.Promedio());
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+
+
+//creo otro objeto y a la vez modificando valores
+
+var miAlumno2 = new Alumno(15263, 'Paul', 'Coronado');
+
+miAlumno2.SetNota1(17);
+miAlumno2.SetNota2(11);
+
+document.write(miAlumno2.Codigo + "<br>");
+document.write(miAlumno2.Nombre + "<br>");
+document.write(miAlumno2.Apellido + "<br>");
+document.write(miAlumno2.getNota1() + "<br>");
+document.write(miAlumno2.getNota2() + "<br>");
+document.write('Mi promedio es : ' + miAlumno2.Promedio());
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+</script>
+
+<!--------------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- Trabajo NAMESPACE(OBJETO) con HTML -->
+
+<p>Aquí estan mis datos:</p>
+<div id="n1"></div>
+
+<script type="text/javascript">
+
+var TRABAJADOR = {
+	
+	Dni: 256313456,
+	NombreTrab:'Sebastian',
+	ApellidoTrab:'AHANA',
+	
+	
+//este metodo me sale todos los datos(256313456, Sebastian, AHANA)  sin "undefined" xq defino "return" y 
+//trabaja con etiqeta html("n1")
+	ImprimirTrab: function(){
+		
+		return "Dni: " + this.Dni + "<br />" +
+ 			   "NombreTrab: " + this.NombreTrab + "<br />" +
+ 			   "ApellidoTrab: " + this.ApellidoTrab;
+	}
+	
+	
+	/* si pongo este metodo me sale "undefined, 256313456, Sebastian, AHANA" XQ tengo q poner "return" y
+	   trabaja sin etiqeta html("n1")
+	ImprimirTrab: function(){
+		
+		document.write(this.Dni + '<br>');
+		document.write(this.NombreTrab + '<br>');
+		document.write(this.ApellidoTrab + '<br>');
+	}*/
+};
+
+document.getElementById("n1").innerHTML = TRABAJADOR.ImprimirTrab();
+</script>
+
+
+</body>
+</html>
